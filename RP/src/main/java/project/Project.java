@@ -8,7 +8,6 @@ public class Project {
 	private String projectName;
 	private String projectKeyword1;
 	private String projectKeyword2;
-	
 	public int getProjectID() {
 		return projectID;
 	}
@@ -50,6 +49,12 @@ public class Project {
 	}
 	public void setProjectKeyword2(String projectKeyword2) {
 		this.projectKeyword2 = projectKeyword2;
+	}
+	@Override
+	public String toString() {
+		return "Project [projectID=" + projectID + ", checkList1_Web=" + checkList1_Web + ", checkList2_App="
+				+ checkList2_App + ", checkList3_AI=" + checkList3_AI + ", projectName=" + projectName
+				+ ", projectKeyword1=" + projectKeyword1 + ", projectKeyword2=" + projectKeyword2 + "]";
 	}
 	
 	

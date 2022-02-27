@@ -49,7 +49,7 @@ public class ProjectDAO {
 	}
 	
 	public ArrayList<Project> getAppCheckedProjectList() {
-		String SQL = "SELECT * FROM RP WHERE checkList1_Web = TRUE";
+		String SQL = "SELECT * FROM RP WHERE checkList2_App = TRUE";
 		ArrayList<Project> list = new ArrayList<Project>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -68,11 +68,13 @@ public class ProjectDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println(list.get(0).toString());
+		System.out.println(list.get(1).toString());
 		return list;
 	}
 	
 	public ArrayList<Project> getAICheckedProjectList() {
-		String SQL = "SELECT * FROM RP WHERE checkList1_Web = TRUE";
+		String SQL = "SELECT * FROM RP WHERE checkList3_AI = TRUE";
 		ArrayList<Project> list = new ArrayList<Project>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
